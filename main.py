@@ -13,7 +13,7 @@ ZONE_NAME = os.getenv("ZONE_NAME")
 APP_ID = os.getenv("APP_ID")
 
 if __name__ == "__main__":
-    if not os.path.exists("/var/log/dyndns-agent.log"):
+    if not os.path.exists("/var/log/dyndns/agent.log"):
         print("No log file detected, please create one by following the GitHub repository documentation")
         exit()
 

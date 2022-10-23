@@ -1,4 +1,3 @@
-import os
 import requests
 import time
 from datetime import datetime
@@ -57,14 +56,14 @@ class Agent:
 
     def __append_log(self, message: str):
         """
-        Add message content to log file located on /var/log/dyndns-agent.log
+        Add message content to log file located on /var/log/dyndns/agent.log
 
         :param message: message content to add to log file
         """
         current_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
         try:
-            log_file = open("/var/log/dyndns-agent.log", "a")
+            log_file = open("/var/log/dyndns/agent.log", "a")
             log_file.write(current_date + " - " + message + "\n")
             log_file.close()
         except:
